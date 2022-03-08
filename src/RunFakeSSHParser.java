@@ -7,8 +7,8 @@ public class RunFakeSSHParser {
             String filename = args[0];
             String outputFilename = args.length > 1 ? args[1] : String.format("%s.csv", filename);
             FakeSSHParser parser = new FakeSSHParser(filename);
-            parser.parse();
-            if (outputFilename != null) {
+            boolean data = parser.parse();
+            if (data && outputFilename != null) {
                 parser.writeToFile(outputFilename);
             }
         }

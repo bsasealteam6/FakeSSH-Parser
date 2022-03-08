@@ -55,7 +55,7 @@ public class SSHTry {
     }
     public String toString()
 	{
-		return String.format("%s,%s,%s,%s,%s,%s,%s", date, time, ipAddress.toString().replace("/", ""), port, software, username, password);
+		return String.format("\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"", date, time, ipAddress.toString().replace("/", ""), port, software, username, password);
 	}
 
 }
